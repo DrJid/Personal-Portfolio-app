@@ -17,6 +17,8 @@
 		168195BA18F908C200C6D9CA /* JPSThumbnailAnnotationView.m in Sources */ = {isa = PBXBuildFile; fileRef = 168195B718F908C200C6D9CA /* JPSThumbnailAnnotationView.m */; };
 		168195BB18F908C200C6D9CA /* JPSThumnail.m in Sources */ = {isa = PBXBuildFile; fileRef = 168195B818F908C200C6D9CA /* JPSThumnail.m */; };
 		168195BE18F922C400C6D9CA /* ProfessionalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 168195BD18F922C400C6D9CA /* ProfessionalViewController.m */; };
+		168195C118F9306B00C6D9CA /* TechSkillsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 168195C018F9306B00C6D9CA /* TechSkillsViewController.m */; };
+		168195C518F93E8900C6D9CA /* c_knr.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 168195C418F93E8900C6D9CA /* c_knr.jpg */; };
 		DABF833718BC541B00A102DA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DABF833618BC541B00A102DA /* Foundation.framework */; };
 		DABF833918BC541B00A102DA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DABF833818BC541B00A102DA /* CoreGraphics.framework */; };
 		DABF833B18BC541B00A102DA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DABF833A18BC541B00A102DA /* UIKit.framework */; };
@@ -65,6 +67,9 @@
 		168195B818F908C200C6D9CA /* JPSThumnail.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JPSThumnail.m; sourceTree = "<group>"; };
 		168195BC18F922C400C6D9CA /* ProfessionalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProfessionalViewController.h; sourceTree = "<group>"; };
 		168195BD18F922C400C6D9CA /* ProfessionalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProfessionalViewController.m; sourceTree = "<group>"; };
+		168195BF18F9306A00C6D9CA /* TechSkillsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TechSkillsViewController.h; sourceTree = "<group>"; };
+		168195C018F9306B00C6D9CA /* TechSkillsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TechSkillsViewController.m; sourceTree = "<group>"; };
+		168195C418F93E8900C6D9CA /* c_knr.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = c_knr.jpg; sourceTree = "<group>"; };
 		DABF833318BC541B00A102DA /* RPSlidingMenuDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RPSlidingMenuDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DABF833618BC541B00A102DA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		DABF833818BC541B00A102DA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -190,7 +195,10 @@
 				168195BD18F922C400C6D9CA /* ProfessionalViewController.m */,
 				168195AD18F9003300C6D9CA /* MapViewController.h */,
 				168195AE18F9003300C6D9CA /* MapViewController.m */,
+				168195BF18F9306A00C6D9CA /* TechSkillsViewController.h */,
+				168195C018F9306B00C6D9CA /* TechSkillsViewController.m */,
 				DABF834E18BC541B00A102DA /* Images.xcassets */,
+				168195C418F93E8900C6D9CA /* c_knr.jpg */,
 				168195AB18F8FC5F00C6D9CA /* Grinnell.png */,
 				DABF833D18BC541B00A102DA /* Supporting Files */,
 			);
@@ -321,6 +329,7 @@
 				DABF834F18BC541B00A102DA /* Images.xcassets in Resources */,
 				168195AC18F8FC5F00C6D9CA /* Grinnell.png in Resources */,
 				DABF834118BC541B00A102DA /* InfoPlist.strings in Resources */,
+				168195C518F93E8900C6D9CA /* c_knr.jpg in Resources */,
 				DABF834A18BC541B00A102DA /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -344,6 +353,7 @@
 				DABF837418BC566300A102DA /* RPSlidingMenuViewController.m in Sources */,
 				168195BA18F908C200C6D9CA /* JPSThumbnailAnnotationView.m in Sources */,
 				168195BE18F922C400C6D9CA /* ProfessionalViewController.m in Sources */,
+				168195C118F9306B00C6D9CA /* TechSkillsViewController.m in Sources */,
 				DABF834718BC541B00A102DA /* RPAppDelegate.m in Sources */,
 				168195A318F8F2A000C6D9CA /* NameViewController.m in Sources */,
 				DABF834318BC541B00A102DA /* main.m in Sources */,

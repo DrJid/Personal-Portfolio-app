@@ -29,11 +29,75 @@
                         <outlet property="collectionView" destination="nb7-X7-ehM" id="nqI-Mv-826"/>
                         <segue destination="zFD-9g-hnC" kind="push" identifier="showName" id="sgO-tb-ivH"/>
                         <segue destination="IQz-L9-BTy" kind="push" identifier="showMap" id="WuC-7B-4ox"/>
+                        <segue destination="Bk4-Ca-U8K" kind="push" identifier="showTechSkills" id="pS3-4E-8Mm"/>
                     </connections>
                 </collectionViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4k8-Fi-efU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="853" y="106"/>
+        </scene>
+        <!--Tech Skills View Controller-->
+        <scene sceneID="jvK-kW-eKk">
+            <objects>
+                <viewController id="Bk4-Ca-U8K" customClass="TechSkillsViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="yEY-RB-enj">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="I rock my hacks with" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="HaW-Le-sKp">
+                                <rect key="frame" x="69" y="20" width="182" height="28"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" name="AvenirNext-Regular" family="Avenir Next" pointSize="20"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="slide2" id="lQc-Hv-YSC">
+                                <rect key="frame" x="29" y="207" width="271" height="158"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="node" id="03d-oT-YGb">
+                                <rect key="frame" x="218" y="466" width="82" height="82"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="objective-c-logo" id="fhU-Yh-glG">
+                                <rect key="frame" x="82" y="50" width="165" height="147"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="rails_logo" id="4QO-Ad-cZx">
+                                <rect key="frame" x="29" y="468" width="68" height="80"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="c_knr.jpg" id="76m-LS-iTA">
+                                <rect key="frame" x="120" y="373" width="88" height="90"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="6Lk-8J-2CG">
+                                <rect key="frame" x="20" y="18" width="35" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Back">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="goBack:" destination="Bk4-Ca-U8K" eventType="touchUpInside" id="g9w-Of-WvJ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="Lhv-UM-AnC"/>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="backButton" destination="6Lk-8J-2CG" id="1ib-Vn-DWZ"/>
+                        <outlet property="cBadge" destination="76m-LS-iTA" id="5Z2-73-MeM"/>
+                        <outlet property="nodeBadge" destination="03d-oT-YGb" id="br7-xC-IIo"/>
+                        <outlet property="objcBadge" destination="fhU-Yh-glG" id="U7P-OG-RHE"/>
+                        <outlet property="railsBadge" destination="4QO-Ad-cZx" id="b11-rK-AFZ"/>
+                        <outlet property="webTechBadge" destination="lQc-Hv-YSC" id="d9e-Js-jF8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="UPq-fu-uXM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1295" y="-628"/>
         </scene>
         <!--Name View Controller - What? -->
         <scene sceneID="hFP-6k-mFB">
@@ -170,6 +234,13 @@
             <point key="canvasLocation" x="377" y="106"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="c_knr.jpg" width="240" height="240"/>
+        <image name="node" width="375" height="360"/>
+        <image name="objective-c-logo" width="213" height="190"/>
+        <image name="rails_logo" width="316" height="376"/>
+        <image name="slide2" width="500" height="293"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

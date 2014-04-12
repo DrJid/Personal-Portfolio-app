@@ -34,6 +34,10 @@
     if ([segue.identifier isEqualToString:@"showName"]) {
         NSLog(@"showName segue called");
     }
+    
+    if ([segue.identifier isEqualToString:@"showTechSkills"]) {
+        NSLog(@"showTechSkills segue called");
+    }
 }
 
 #pragma mark - RPSlidingMenuViewController
@@ -113,7 +117,7 @@
         }
             
         case 3: {
-            [self performSegueWithIdentifier:@"showName" sender:self];
+            [self performSegueWithIdentifier:@"showTechSkills" sender:self];
             break;
         }
             
