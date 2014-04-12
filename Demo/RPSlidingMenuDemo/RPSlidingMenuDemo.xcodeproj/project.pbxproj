@@ -19,6 +19,10 @@
 		168195BE18F922C400C6D9CA /* ProfessionalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 168195BD18F922C400C6D9CA /* ProfessionalViewController.m */; };
 		168195C118F9306B00C6D9CA /* TechSkillsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 168195C018F9306B00C6D9CA /* TechSkillsViewController.m */; };
 		168195C518F93E8900C6D9CA /* c_knr.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 168195C418F93E8900C6D9CA /* c_knr.jpg */; };
+		168195CA18F9515D00C6D9CA /* URBMediaFocusViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 168195C918F9515D00C6D9CA /* URBMediaFocusViewController.m */; };
+		168195CD18F9597100C6D9CA /* ProActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 168195CC18F9597100C6D9CA /* ProActivity.m */; };
+		168195D518F960BE00C6D9CA /* FBShimmeringLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 168195D218F960BE00C6D9CA /* FBShimmeringLayer.m */; };
+		168195D618F960BE00C6D9CA /* FBShimmeringView.m in Sources */ = {isa = PBXBuildFile; fileRef = 168195D418F960BE00C6D9CA /* FBShimmeringView.m */; };
 		DABF833718BC541B00A102DA /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DABF833618BC541B00A102DA /* Foundation.framework */; };
 		DABF833918BC541B00A102DA /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DABF833818BC541B00A102DA /* CoreGraphics.framework */; };
 		DABF833B18BC541B00A102DA /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DABF833A18BC541B00A102DA /* UIKit.framework */; };
@@ -70,6 +74,16 @@
 		168195BF18F9306A00C6D9CA /* TechSkillsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TechSkillsViewController.h; sourceTree = "<group>"; };
 		168195C018F9306B00C6D9CA /* TechSkillsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TechSkillsViewController.m; sourceTree = "<group>"; };
 		168195C418F93E8900C6D9CA /* c_knr.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = c_knr.jpg; sourceTree = "<group>"; };
+		168195C818F9515D00C6D9CA /* URBMediaFocusViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = URBMediaFocusViewController.h; sourceTree = "<group>"; };
+		168195C918F9515D00C6D9CA /* URBMediaFocusViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = URBMediaFocusViewController.m; sourceTree = "<group>"; };
+		168195CB18F9597100C6D9CA /* ProActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ProActivity.h; sourceTree = "<group>"; };
+		168195CC18F9597100C6D9CA /* ProActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ProActivity.m; sourceTree = "<group>"; };
+		168195CF18F960BE00C6D9CA /* FBShimmering-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "FBShimmering-Prefix.pch"; sourceTree = "<group>"; };
+		168195D018F960BE00C6D9CA /* FBShimmering.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBShimmering.h; sourceTree = "<group>"; };
+		168195D118F960BE00C6D9CA /* FBShimmeringLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBShimmeringLayer.h; sourceTree = "<group>"; };
+		168195D218F960BE00C6D9CA /* FBShimmeringLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBShimmeringLayer.m; sourceTree = "<group>"; };
+		168195D318F960BE00C6D9CA /* FBShimmeringView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBShimmeringView.h; sourceTree = "<group>"; };
+		168195D418F960BE00C6D9CA /* FBShimmeringView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBShimmeringView.m; sourceTree = "<group>"; };
 		DABF833318BC541B00A102DA /* RPSlidingMenuDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RPSlidingMenuDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DABF833618BC541B00A102DA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		DABF833818BC541B00A102DA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -147,9 +161,33 @@
 			path = JPSThumbnailAnnotation;
 			sourceTree = "<group>";
 		};
+		168195C718F9514A00C6D9CA /* URBMediaFocusViewController */ = {
+			isa = PBXGroup;
+			children = (
+				168195C818F9515D00C6D9CA /* URBMediaFocusViewController.h */,
+				168195C918F9515D00C6D9CA /* URBMediaFocusViewController.m */,
+			);
+			name = URBMediaFocusViewController;
+			sourceTree = "<group>";
+		};
+		168195CE18F960BE00C6D9CA /* FBShimmering */ = {
+			isa = PBXGroup;
+			children = (
+				168195CF18F960BE00C6D9CA /* FBShimmering-Prefix.pch */,
+				168195D018F960BE00C6D9CA /* FBShimmering.h */,
+				168195D118F960BE00C6D9CA /* FBShimmeringLayer.h */,
+				168195D218F960BE00C6D9CA /* FBShimmeringLayer.m */,
+				168195D318F960BE00C6D9CA /* FBShimmeringView.h */,
+				168195D418F960BE00C6D9CA /* FBShimmeringView.m */,
+			);
+			path = FBShimmering;
+			sourceTree = "<group>";
+		};
 		DABF832A18BC541B00A102DA = {
 			isa = PBXGroup;
 			children = (
+				168195CE18F960BE00C6D9CA /* FBShimmering */,
+				168195C718F9514A00C6D9CA /* URBMediaFocusViewController */,
 				168195B218F908C200C6D9CA /* JPSThumbnailAnnotation */,
 				168195A418F8F71B00C6D9CA /* BTGlassScrollView */,
 				DABF836B18BC566300A102DA /* RPSlidingMenu */,
@@ -193,6 +231,8 @@
 				168195A218F8F2A000C6D9CA /* NameViewController.m */,
 				168195BC18F922C400C6D9CA /* ProfessionalViewController.h */,
 				168195BD18F922C400C6D9CA /* ProfessionalViewController.m */,
+				168195CB18F9597100C6D9CA /* ProActivity.h */,
+				168195CC18F9597100C6D9CA /* ProActivity.m */,
 				168195AD18F9003300C6D9CA /* MapViewController.h */,
 				168195AE18F9003300C6D9CA /* MapViewController.m */,
 				168195BF18F9306A00C6D9CA /* TechSkillsViewController.h */,
@@ -349,6 +389,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				168195D518F960BE00C6D9CA /* FBShimmeringLayer.m in Sources */,
+				168195CA18F9515D00C6D9CA /* URBMediaFocusViewController.m in Sources */,
 				168195A918F8F71B00C6D9CA /* BTGlassScrollView.m in Sources */,
 				DABF837418BC566300A102DA /* RPSlidingMenuViewController.m in Sources */,
 				168195BA18F908C200C6D9CA /* JPSThumbnailAnnotationView.m in Sources */,
@@ -356,6 +398,8 @@
 				168195C118F9306B00C6D9CA /* TechSkillsViewController.m in Sources */,
 				DABF834718BC541B00A102DA /* RPAppDelegate.m in Sources */,
 				168195A318F8F2A000C6D9CA /* NameViewController.m in Sources */,
+				168195CD18F9597100C6D9CA /* ProActivity.m in Sources */,
+				168195D618F960BE00C6D9CA /* FBShimmeringView.m in Sources */,
 				DABF834318BC541B00A102DA /* main.m in Sources */,
 				168195BB18F908C200C6D9CA /* JPSThumnail.m in Sources */,
 				168195AA18F8F71B00C6D9CA /* UIImage+ImageEffects.m in Sources */,

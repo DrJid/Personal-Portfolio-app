@@ -8,9 +8,11 @@
 
 #import "NameViewController.h"
 #import "ProfessionalViewController.h"
+#import "ProActivity.h"
 
 @interface NameViewController ()
 @property (weak, nonatomic) IBOutlet UIButton *backButton;
+@property (nonatomic, strong) NSMutableArray *allProActivities;
 
 @end
 
@@ -47,6 +49,49 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    self.allProActivities = [[NSMutableArray alloc] initWithCapacity:5];
+    
+    //Create all the proActivities.
+    ProActivity *appdev = [[ProActivity alloc] init];
+    appdev.title  = @"Co-founder @ Grinnell Appdev";
+    appdev.description = @"Student group that saves the lives of collge students";
+    appdev.leftImage = [UIImage imageNamed:@"appdevlogo"];
+    appdev.midImage = [UIImage imageNamed:@"me"];
+    appdev.rightImage = [UIImage imageNamed:@"image2_320x210"];
+    
+    [self.allProActivities addObject:appdev];
+    
+    
+    ProActivity *barkcare= [[ProActivity alloc] init];
+    barkcare.title  = @"HackNY '13 Fellow & iOS Intern \n @ Bark & Co";
+    barkcare.description = @"Built and shipped BarkCare - 24/7 access to a vet! Best vet care in NYC.";
+    barkcare.leftImage = [UIImage imageNamed:@"appdevlogo"];
+    barkcare.midImage = [UIImage imageNamed:@"me"];
+    barkcare.rightImage = [UIImage imageNamed:@"image2_320x210"];
+    
+    
+    [self.allProActivities addObject:barkcare];
+    
+    ProActivity *pikuzone= [[ProActivity alloc] init];
+    pikuzone.title  = @"iOS Engineer Intern \n @ Pikuzone '12";
+    pikuzone.description = @"Built and shipped Pikuzone - A Walled garden where you're child can learn to communicate online";
+    pikuzone.leftImage = [UIImage imageNamed:@"appdevlogo"];
+    pikuzone.midImage = [UIImage imageNamed:@"me"];
+    pikuzone.rightImage = [UIImage imageNamed:@"image2_320x210"];
+    
+    [self.allProActivities addObject:pikuzone];
+    
+    
+    ProActivity *voyse= [[ProActivity alloc] init];
+    voyse.title  = @"Co-founder, Developer, Designer \n @ Voyse";
+    voyse.description = @"Send encrypted secure self destructing voice messages to your friends and loved ones!";
+    voyse.leftImage = [UIImage imageNamed:@"voyse-playback"];
+    voyse.midImage = [UIImage imageNamed:@"voice_icon"];
+    voyse.rightImage = [UIImage imageNamed:@"hannah"];
+    
+    [self.allProActivities addObject:voyse];
+
+    
     
     //showing white status
     [[UIApplication sharedApplication] setStatusBarStyle:UIStatusBarStyleLightContent];
@@ -78,17 +123,18 @@
     [self.view addSubview:_viewScroller];
     [self.view bringSubviewToFront:self.backButton];
     
-    _glassScrollView1 = [[BTGlassScrollView alloc] initWithFrame:self.view.frame BackgroundImage:[UIImage imageNamed:@"grinnell_appdev_2"] blurredImage:nil viewDistanceFromBottom:120 foregroundView:[self customView]];
-    _glassScrollView2 = [[BTGlassScrollView alloc] initWithFrame:self.view.frame BackgroundImage:[UIImage imageNamed:@"bcare"] blurredImage:nil viewDistanceFromBottom:120 foregroundView:[self customView]];
-    _glassScrollView3 = [[BTGlassScrollView alloc] initWithFrame:self.view.frame BackgroundImage:[UIImage imageNamed:@"pikuzone_bg"] blurredImage:nil viewDistanceFromBottom:120 foregroundView:[self customView]];
-    _glassScrollView4 = [[BTGlassScrollView alloc] initWithFrame:self.view.frame BackgroundImage:[UIImage imageNamed:@"voyse_bg"] blurredImage:nil viewDistanceFromBottom:120 foregroundView:[self customView]];
+    _glassScrollView1 = [[BTGlassScrollView alloc] initWithFrame:self.view.frame BackgroundImage:[UIImage imageNamed:@"grinnell_appdev_2"] blurredImage:nil viewDistanceFromBottom:120 foregroundView:[self customViewWithProActivity:self.allProActivities[0]]];
+    _glassScrollView2 = [[BTGlassScrollView alloc] initWithFrame:self.view.frame BackgroundImage:[UIImage imageNamed:@"bcare"] blurredImage:nil viewDistanceFromBottom:120 foregroundView:[self customViewWithProActivity:self.allProActivities[1]]];
+    _glassScrollView3 = [[BTGlassScrollView alloc] initWithFrame:self.view.frame BackgroundImage:[UIImage imageNamed:@"pikuzone_bg"] blurredImage:nil viewDistanceFromBottom:120 foregroundView:[self customViewWithProActivity:self.allProActivities[2]]];
+    _glassScrollView4 = [[BTGlassScrollView alloc] initWithFrame:self.view.frame BackgroundImage:[UIImage imageNamed:@"voyse_bg"] blurredImage:nil viewDistanceFromBottom:120 foregroundView:[self customViewWithProActivity:self.allProActivities[3]]];
 
- 
     
     [_viewScroller addSubview:_glassScrollView1];
     [_viewScroller addSubview:_glassScrollView2];
     [_viewScroller addSubview:_glassScrollView3];
     [_viewScroller addSubview:_glassScrollView4];
+    
+    
     
     
 }
@@ -143,55 +189,71 @@
 
 // customViewWithProfessionalObject
 
-- (UIView *)customView
+- (UIView *)customViewWithProActivity:(ProActivity *)activity
 {
-    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 705)];
+    UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     
-    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(5, 5, 310, 120)];
-    //    [label setText:[NSString stringWithFormat:@"%i℉",arc4random_uniform(20) + 60]];
-    label.text = @"Grinnell Appdev";
-    [label setTextColor:[UIColor whiteColor]];
-    [label setFont:[UIFont fontWithName:@"HelveticaNeue" size:40]];
-    [label setShadowColor:[UIColor blackColor]];
-    [label setShadowOffset:CGSizeMake(1, 1)];
-    [label sizeToFit];
-    [view addSubview:label];
+    //Should rename this.. to ArticleViewController.. But it was being awkward the last time i tried.
+    ProfessionalViewController *pvc = [storyboard instantiateViewControllerWithIdentifier:@"ProfessionalViewController"];
     
-    UIView *box1 = [[UIView alloc] initWithFrame:CGRectMake(5, 140, 310, 125)];
-    box1.layer.cornerRadius = 3;
-    box1.backgroundColor = [UIColor colorWithWhite:0 alpha:.15];
-    [view addSubview:box1];
+    pvc.activity = activity;
     
-    UIView *box2 = [[UIView alloc] initWithFrame:CGRectMake(5, 270, 310, 300)];
-    box2.layer.cornerRadius = 3;
-    box2.backgroundColor = [UIColor colorWithWhite:0 alpha:.15];
-    [view addSubview:box2];
+    [self addChildViewController:pvc];
+    [pvc didMoveToParentViewController:self];
     
-    UIView *box3 = [[UIView alloc] initWithFrame:CGRectMake(5, 575, 310, 125)];
-    box3.layer.cornerRadius = 3;
-    box3.backgroundColor = [UIColor colorWithWhite:0 alpha:.15];
-    [view addSubview:box3];
-    
-//    return view;
-    
-
-     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-     
-     //Should rename this.. to ArticleViewController.. But it was being awkward the last time i tried.
-     ProfessionalViewController *pvc = [storyboard instantiateViewControllerWithIdentifier:@"ProfessionalViewController"];
-    
-//     tvc.article = article;
-    
-     //    [tvc  updateViewConstraints];
-     //    [tvc viewWillLayoutSubviews];
-     
-     [self addChildViewController:pvc];
-     [pvc didMoveToParentViewController:self];
-     
-     return pvc.view;
-    
-    
+    return pvc.view;
 }
+//
+//
+//- (UIView *)customView
+//{
+//    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 705)];
+//    
+//    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(5, 5, 310, 120)];
+//    //    [label setText:[NSString stringWithFormat:@"%i℉",arc4random_uniform(20) + 60]];
+//    label.text = @"Grinnell Appdev";
+//    [label setTextColor:[UIColor whiteColor]];
+//    [label setFont:[UIFont fontWithName:@"HelveticaNeue" size:40]];
+//    [label setShadowColor:[UIColor blackColor]];
+//    [label setShadowOffset:CGSizeMake(1, 1)];
+//    [label sizeToFit];
+//    [view addSubview:label];
+//    
+//    UIView *box1 = [[UIView alloc] initWithFrame:CGRectMake(5, 140, 310, 125)];
+//    box1.layer.cornerRadius = 3;
+//    box1.backgroundColor = [UIColor colorWithWhite:0 alpha:.15];
+//    [view addSubview:box1];
+//    
+//    UIView *box2 = [[UIView alloc] initWithFrame:CGRectMake(5, 270, 310, 300)];
+//    box2.layer.cornerRadius = 3;
+//    box2.backgroundColor = [UIColor colorWithWhite:0 alpha:.15];
+//    [view addSubview:box2];
+//    
+//    UIView *box3 = [[UIView alloc] initWithFrame:CGRectMake(5, 575, 310, 125)];
+//    box3.layer.cornerRadius = 3;
+//    box3.backgroundColor = [UIColor colorWithWhite:0 alpha:.15];
+//    [view addSubview:box3];
+//    
+////    return view;
+//    
+//
+//     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
+//     
+//     //Should rename this.. to ArticleViewController.. But it was being awkward the last time i tried.
+//     ProfessionalViewController *pvc = [storyboard instantiateViewControllerWithIdentifier:@"ProfessionalViewController"];
+//    
+////     tvc.article = article;
+//    
+//     //    [tvc  updateViewConstraints];
+//     //    [tvc viewWillLayoutSubviews];
+//     
+//     [self addChildViewController:pvc];
+//     [pvc didMoveToParentViewController:self];
+//     
+//     return pvc.view;
+//    
+//    
+//}
 
 - (void)didReceiveMemoryWarning
 {

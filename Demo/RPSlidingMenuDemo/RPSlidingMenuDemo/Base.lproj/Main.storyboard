@@ -144,33 +144,60 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rawr" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="tZV-3Y-4jx">
-                                <rect key="frame" x="32" y="35" width="40" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Developed 6 apps that are live on the app stores. " textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Vrh-as-NT0">
+                                <rect key="frame" x="12" y="448" width="299" height="100"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="tableCellGroupedBackgroundColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Another rawr" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="nY5-kQ-ZbZ">
-                                <rect key="frame" x="32" y="64" width="99" height="21"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="center" id="ebE-wn-IIS">
+                                <rect key="frame" x="15" y="113" width="285" height="191"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.0" colorSpace="calibratedRGB"/>
+                                <string key="text">The group which started as just 3 interested computer science nerds, has grown into a lively bustling team (currently 18!) of community builders, designers, user experience researchers and even more student developers, building apps and products to make the college experience even more appealing.</string>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Do I see this? " lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Vrh-as-NT0">
-                                <rect key="frame" x="20" y="403" width="110" height="21"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <imageView contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="bcare" id="dJ3-XU-21U">
+                                <rect key="frame" x="15" y="312" width="94" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The bottom" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="UhY-a7-6FS">
-                                <rect key="frame" x="20" y="527" width="89" height="21"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pikuzone_bg" id="wwR-kM-H5a">
+                                <rect key="frame" x="117" y="312" width="94" height="128"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="slide2" id="otb-Nt-xPt">
+                                <rect key="frame" x="217" y="312" width="94" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Co-founder of Grinnell Appdev" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="tZV-3Y-4jx">
+                                <rect key="frame" x="6" y="35" width="314" height="70"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <color key="textColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                 <nil key="highlightedColor"/>
+                                <color key="shadowColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                <size key="shadowOffset" width="1" height="-1"/>
                             </label>
+                            <view contentMode="scaleToFill" id="LKy-OW-lhf" customClass="FBShimmeringView">
+                                <rect key="frame" x="246" y="66" width="74" height="61"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="bottomLabel" destination="Vrh-as-NT0" id="XBn-NH-0RO"/>
+                        <outlet property="descriptionTextview" destination="ebE-wn-IIS" id="dbn-QO-UhZ"/>
+                        <outlet property="leftImageView" destination="dJ3-XU-21U" id="nLQ-dV-rQn"/>
+                        <outlet property="midImageView" destination="wwR-kM-H5a" id="4Aa-di-9IT"/>
+                        <outlet property="rightImageView" destination="otb-Nt-xPt" id="3Qz-s8-Oh1"/>
+                        <outlet property="shimmeringView" destination="LKy-OW-lhf" id="5ap-2Y-Dia"/>
+                        <outlet property="titleLabel" destination="tZV-3Y-4jx" id="fSs-3c-IWZ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9rq-gJ-djB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -235,9 +262,11 @@
         </scene>
     </scenes>
     <resources>
+        <image name="bcare" width="1280" height="1050"/>
         <image name="c_knr.jpg" width="240" height="240"/>
         <image name="node" width="375" height="360"/>
         <image name="objective-c-logo" width="213" height="190"/>
+        <image name="pikuzone_bg" width="1280" height="1050"/>
         <image name="rails_logo" width="316" height="376"/>
         <image name="slide2" width="500" height="293"/>
     </resources>
