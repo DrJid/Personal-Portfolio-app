@@ -76,11 +76,10 @@
     
     ProActivity *pikuzone= [[ProActivity alloc] init];
     pikuzone.title  = @"iOS Engineer Intern \n @ Pikuzone - Summer '12";
-    pikuzone.description = @"Built and shipped Pikuzone - A walled garden where your child can learn to communicate online";
+    pikuzone.description = @"Built and shipped Pikuzone iOS app - A walled garden where your child can learn to communicate online";
     pikuzone.bottomString = @"See more at http://pikuzone.com";
-    pikuzone.leftImage = [UIImage imageNamed:@"appdevlogo"];
-    pikuzone.midImage = [UIImage imageNamed:@"me"];
-    pikuzone.rightImage = [UIImage imageNamed:@"image2_320x210"];
+    pikuzone.leftImage = [UIImage imageNamed:@"pikuzone_web"];
+    pikuzone.midImage = [UIImage imageNamed:@"pikuzone"];
     
     [self.allProActivities addObject:pikuzone];
     

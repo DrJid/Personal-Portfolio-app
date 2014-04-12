@@ -84,6 +84,7 @@
     orginalFrame = self.cBadge.frame;
     mid = CGPointMake(CGRectGetMidX(orginalFrame), CGRectGetMidY(orginalFrame));
     self.cBadge.frame = CGRectOffset(self.cBadge.frame, 200, 700);
+    self.cBadge.layer.zPosition = -5;
     self.cSnapBehavior = [[UISnapBehavior alloc]initWithItem:self.cBadge snapToPoint:mid];
     self.cSnapBehavior.damping = 0.8;
     
@@ -115,12 +116,12 @@
 {
     [super viewDidAppear:animated];
     
-    [self performSelector:@selector(showObjcBadge) withObject:nil afterDelay:0.6f];
+    [self performSelector:@selector(showObjcBadge) withObject:nil afterDelay:0.4f];
     [self performSelector:@selector(showWebTechBadge) withObject:nil afterDelay:1.0f];
-    [self performSelector:@selector(showCBadge) withObject:nil afterDelay:1.5f];
-    [self performSelector:@selector(showRailsBadge) withObject:nil afterDelay:2.0f];
-    [self performSelector:@selector(showNodeBadge) withObject:nil afterDelay:2.0f];
-    [self performSelector:@selector(showBackButton) withObject:nil afterDelay:3.0f];
+    [self performSelector:@selector(showCBadge) withObject:nil afterDelay:1.6f];
+    [self performSelector:@selector(showRailsBadge) withObject:nil afterDelay:2.2f];
+    [self performSelector:@selector(showNodeBadge) withObject:nil afterDelay:2.2f];
+    [self performSelector:@selector(showBackButton) withObject:nil afterDelay:3.2f];
     
     //Show the back button now.
     

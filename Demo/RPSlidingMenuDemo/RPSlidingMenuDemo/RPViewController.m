@@ -52,10 +52,10 @@
  
     switch (row) {
         case 0: {
-            slidingMenuCell.textLabel.text = @"About me";
+            slidingMenuCell.textLabel.text = @"Hi, I'm Maijid";
             slidingMenuCell.detailTextLabel.numberOfLines = 0;
-            slidingMenuCell.detailTextLabel.text = @"Tap to see a little bit more about me. Or m have any tappable content necessarily. If you know \n maijid.com";
-            [slidingMenuCell.detailTextLabel sizeToFit];
+            slidingMenuCell.detailTextLabel.text = @"And I rock this world. \n maijid.com";
+//            [slidingMenuCell.detailTextLabel sizeToFit];
             slidingMenuCell.backgroundImageView.image = [UIImage imageNamed:@"me"];
             break;
         }
@@ -102,7 +102,7 @@
     
     switch (row) {
         case 0: {
-            [self performSegueWithIdentifier:@"showName" sender:self];
+            // do nothing.
             break;
         }
             
@@ -122,7 +122,7 @@
         }
             
         case 4: {
-            [self performSegueWithIdentifier:@"showName" sender:self];
+            //do nothing.
             break;
         }
             

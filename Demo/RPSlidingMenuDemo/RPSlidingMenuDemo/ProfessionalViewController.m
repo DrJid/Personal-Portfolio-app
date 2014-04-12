@@ -63,9 +63,26 @@
     
     self.titleLabel.text = self.activity.title;
     self.descriptionTextview.text = self.activity.description;
-    self.leftImageView.image = self.activity.leftImage;
-    self.midImageView.image = self.activity.midImage;
-    self.rightImageView.image = self.activity.rightImage;
+    
+    if (self.activity.leftImage) {
+        self.leftImageView.image = self.activity.leftImage;
+    } else {
+        [self.leftImageView removeFromSuperview];
+    }
+    
+    if (self.activity.midImage) {
+        self.midImageView.image = self.activity.midImage;
+    } else {
+        [self.midImageView removeFromSuperview];
+    }
+    
+    if (self.activity.rightImage) {
+        self.rightImageView.image = self.activity.rightImage;
+    } else {
+        [self.rightImageView removeFromSuperview];
+    }
+    
+//    self.rightImageView.image = self.activity.rightImage;
     self.bottomTextview.text = self.activity.bottomString;
     
     self.leftImageView.clipsToBounds = self.midImageView.clipsToBounds = self.rightImageView.clipsToBounds = YES;
@@ -104,7 +121,9 @@
     
     UILabel *swipeRight = [[UILabel alloc] initWithFrame:self.shimmeringView.bounds];
     swipeRight.textAlignment = NSTextAlignmentCenter;
-    swipeRight.text = NSLocalizedString(@">>>", nil);
+    swipeRight.text = @">>>";
+    swipeRight.textColor = [UIColor whiteColor];
+    
     self.shimmeringView.contentView = swipeRight;
 
     self.shimmeringView.shimmering = YES;

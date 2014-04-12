@@ -113,15 +113,7 @@
     if ([overlay isKindOfClass:[MKPolyline class]]) {
         MKPolylineRenderer *renderer = [[MKPolylineRenderer alloc]
                                         initWithPolyline:(MKPolyline*)overlay];
-        
-        /*
-         if (overlay == _route.flyPartPolyline) {
-         renderer.strokeColor = [UIColor redColor];
-         } else {
-         renderer.strokeColor = [UIColor blueColor];
-         }
-         */
-        renderer.strokeColor = [UIColor colorWithRed:1.000 green:0.522 blue:0.525 alpha:1.000];
+        renderer.strokeColor = [UIColor colorWithRed:53.f/255.f green:70.f/255.f blue:227.f/255.f alpha:1.000];
         return renderer;
     }
     return nil;
