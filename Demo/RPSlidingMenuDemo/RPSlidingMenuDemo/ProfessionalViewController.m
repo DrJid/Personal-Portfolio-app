@@ -23,7 +23,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *leftImageView;
 @property (weak, nonatomic) IBOutlet UIImageView *midImageView;
 @property (weak, nonatomic) IBOutlet UIImageView *rightImageView;
-@property (weak, nonatomic) IBOutlet UILabel *bottomLabel;
+@property (weak, nonatomic) IBOutlet UITextView *bottomTextview;
 
 @property (weak, nonatomic) IBOutlet FBShimmeringView *shimmeringView;
 
@@ -66,6 +66,7 @@
     self.leftImageView.image = self.activity.leftImage;
     self.midImageView.image = self.activity.midImage;
     self.rightImageView.image = self.activity.rightImage;
+    self.bottomTextview.text = self.activity.bottomString;
     
     self.leftImageView.clipsToBounds = self.midImageView.clipsToBounds = self.rightImageView.clipsToBounds = YES;
     

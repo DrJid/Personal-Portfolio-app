@@ -54,27 +54,30 @@
     //Create all the proActivities.
     ProActivity *appdev = [[ProActivity alloc] init];
     appdev.title  = @"Co-founder @ Grinnell Appdev";
-    appdev.description = @"Student group that saves the lives of collge students";
+    appdev.description = @"A student group of developers, designers, community builders that aims to improve the college experience by developing apps for smart devices \n\n Raised over $80,000 to support group activities.";
+    appdev.bottomString = @"See more at http://grinnellappdev.com";
     appdev.leftImage = [UIImage imageNamed:@"appdevlogo"];
-    appdev.midImage = [UIImage imageNamed:@"me"];
-    appdev.rightImage = [UIImage imageNamed:@"image2_320x210"];
+    appdev.midImage = [UIImage imageNamed:@"appdev"];
+    appdev.rightImage = [UIImage imageNamed:@"appdev_apps"];
     
     [self.allProActivities addObject:appdev];
     
     
     ProActivity *barkcare= [[ProActivity alloc] init];
-    barkcare.title  = @"HackNY '13 Fellow & iOS Intern \n @ Bark & Co";
-    barkcare.description = @"Built and shipped BarkCare - 24/7 access to a vet! Best vet care in NYC.";
-    barkcare.leftImage = [UIImage imageNamed:@"appdevlogo"];
-    barkcare.midImage = [UIImage imageNamed:@"me"];
-    barkcare.rightImage = [UIImage imageNamed:@"image2_320x210"];
+    barkcare.title  = @"HackNY '13 Fellow & iOS Intern \n @ Bark & Co, NYC";
+    barkcare.description = @"Architectured and shipped the BarkCare App - A vet in your pocket, 24/7! \n\n This service brings on demand in home vet care to residents in NYC";
+    barkcare.bottomString = @"See more at https://www.barkcare.com";
+    barkcare.leftImage = [UIImage imageNamed:@"barkcare-demo"];
+    barkcare.midImage = [UIImage imageNamed:@"barkcare-message"];
+    barkcare.rightImage = [UIImage imageNamed:@"barkcare-promo"];
     
     
     [self.allProActivities addObject:barkcare];
     
     ProActivity *pikuzone= [[ProActivity alloc] init];
-    pikuzone.title  = @"iOS Engineer Intern \n @ Pikuzone '12";
-    pikuzone.description = @"Built and shipped Pikuzone - A Walled garden where you're child can learn to communicate online";
+    pikuzone.title  = @"iOS Engineer Intern \n @ Pikuzone - Summer '12";
+    pikuzone.description = @"Built and shipped Pikuzone - A walled garden where your child can learn to communicate online";
+    pikuzone.bottomString = @"See more at http://pikuzone.com";
     pikuzone.leftImage = [UIImage imageNamed:@"appdevlogo"];
     pikuzone.midImage = [UIImage imageNamed:@"me"];
     pikuzone.rightImage = [UIImage imageNamed:@"image2_320x210"];
@@ -84,7 +87,8 @@
     
     ProActivity *voyse= [[ProActivity alloc] init];
     voyse.title  = @"Co-founder, Developer, Designer \n @ Voyse";
-    voyse.description = @"Send encrypted secure self destructing voice messages to your friends and loved ones!";
+    voyse.description = @"Send encrypted, secure self destructing voice messages to your friends and loved ones! \n\n All voyses are encrypted securely using AES-256 bit encryption.";
+    voyse.bottomString = @"See more at http://voyse.me";
     voyse.leftImage = [UIImage imageNamed:@"voyse-playback"];
     voyse.midImage = [UIImage imageNamed:@"voice_icon"];
     voyse.rightImage = [UIImage imageNamed:@"hannah"];
