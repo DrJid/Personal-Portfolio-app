@@ -17,4 +17,7 @@
 @property (nonatomic, strong) UIImage *rightImage;
 @property (nonatomic, strong) NSString *bottomString;
 
+@property (nonatomic, assign) BOOL hasLeft;
+@property (nonatomic, assign) BOOL hasRight;
+
 @end

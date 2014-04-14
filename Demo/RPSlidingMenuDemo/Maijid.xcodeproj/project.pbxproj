@@ -84,23 +84,23 @@
 		168195D218F960BE00C6D9CA /* FBShimmeringLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBShimmeringLayer.m; sourceTree = "<group>"; };
 		168195D318F960BE00C6D9CA /* FBShimmeringView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FBShimmeringView.h; sourceTree = "<group>"; };
 		168195D418F960BE00C6D9CA /* FBShimmeringView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FBShimmeringView.m; sourceTree = "<group>"; };
-		DABF833318BC541B00A102DA /* RPSlidingMenuDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RPSlidingMenuDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		DABF833318BC541B00A102DA /* Maijid.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Maijid.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DABF833618BC541B00A102DA /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		DABF833818BC541B00A102DA /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
 		DABF833A18BC541B00A102DA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
-		DABF833E18BC541B00A102DA /* RPSlidingMenuDemo-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RPSlidingMenuDemo-Info.plist"; sourceTree = "<group>"; };
+		DABF833E18BC541B00A102DA /* Maijid-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Maijid-Info.plist"; sourceTree = "<group>"; };
 		DABF834018BC541B00A102DA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		DABF834218BC541B00A102DA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
-		DABF834418BC541B00A102DA /* RPSlidingMenuDemo-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RPSlidingMenuDemo-Prefix.pch"; sourceTree = "<group>"; };
+		DABF834418BC541B00A102DA /* Maijid-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Maijid-Prefix.pch"; sourceTree = "<group>"; };
 		DABF834518BC541B00A102DA /* RPAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RPAppDelegate.h; sourceTree = "<group>"; };
 		DABF834618BC541B00A102DA /* RPAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RPAppDelegate.m; sourceTree = "<group>"; };
 		DABF834918BC541B00A102DA /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		DABF834B18BC541B00A102DA /* RPViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = RPViewController.h; sourceTree = "<group>"; };
 		DABF834C18BC541B00A102DA /* RPViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RPViewController.m; sourceTree = "<group>"; };
 		DABF834E18BC541B00A102DA /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
-		DABF835418BC541B00A102DA /* RPSlidingMenuDemoTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = RPSlidingMenuDemoTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		DABF835418BC541B00A102DA /* MaijidTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MaijidTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		DABF835518BC541B00A102DA /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
-		DABF835D18BC541B00A102DA /* RPSlidingMenuDemoTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "RPSlidingMenuDemoTests-Info.plist"; sourceTree = "<group>"; };
+		DABF835D18BC541B00A102DA /* MaijidTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MaijidTests-Info.plist"; sourceTree = "<group>"; };
 		DABF835F18BC541B00A102DA /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		DABF836118BC541B00A102DA /* RPSlidingMenuDemoTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = RPSlidingMenuDemoTests.m; sourceTree = "<group>"; };
 		DABF836C18BC566300A102DA /* RPSlidingMenuCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RPSlidingMenuCell.h; sourceTree = "<group>"; };
@@ -201,8 +201,8 @@
 		DABF833418BC541B00A102DA /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				DABF833318BC541B00A102DA /* RPSlidingMenuDemo.app */,
-				DABF835418BC541B00A102DA /* RPSlidingMenuDemoTests.xctest */,
+				DABF833318BC541B00A102DA /* Maijid.app */,
+				DABF835418BC541B00A102DA /* MaijidTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -248,10 +248,10 @@
 		DABF833D18BC541B00A102DA /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				DABF833E18BC541B00A102DA /* RPSlidingMenuDemo-Info.plist */,
+				DABF833E18BC541B00A102DA /* Maijid-Info.plist */,
 				DABF833F18BC541B00A102DA /* InfoPlist.strings */,
 				DABF834218BC541B00A102DA /* main.m */,
-				DABF834418BC541B00A102DA /* RPSlidingMenuDemo-Prefix.pch */,
+				DABF834418BC541B00A102DA /* Maijid-Prefix.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -268,7 +268,7 @@
 		DABF835C18BC541B00A102DA /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
-				DABF835D18BC541B00A102DA /* RPSlidingMenuDemoTests-Info.plist */,
+				DABF835D18BC541B00A102DA /* MaijidTests-Info.plist */,
 				DABF835E18BC541B00A102DA /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
@@ -292,9 +292,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		DABF833218BC541B00A102DA /* RPSlidingMenuDemo */ = {
+		DABF833218BC541B00A102DA /* Maijid */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DABF836518BC541B00A102DA /* Build configuration list for PBXNativeTarget "RPSlidingMenuDemo" */;
+			buildConfigurationList = DABF836518BC541B00A102DA /* Build configuration list for PBXNativeTarget "Maijid" */;
 			buildPhases = (
 				DABF832F18BC541B00A102DA /* Sources */,
 				DABF833018BC541B00A102DA /* Frameworks */,
@@ -304,14 +304,14 @@
 			);
 			dependencies = (
 			);
-			name = RPSlidingMenuDemo;
+			name = Maijid;
 			productName = RPSlidingMenuDemo;
-			productReference = DABF833318BC541B00A102DA /* RPSlidingMenuDemo.app */;
+			productReference = DABF833318BC541B00A102DA /* Maijid.app */;
 			productType = "com.apple.product-type.application";
 		};
-		DABF835318BC541B00A102DA /* RPSlidingMenuDemoTests */ = {
+		DABF835318BC541B00A102DA /* MaijidTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = DABF836818BC541B00A102DA /* Build configuration list for PBXNativeTarget "RPSlidingMenuDemoTests" */;
+			buildConfigurationList = DABF836818BC541B00A102DA /* Build configuration list for PBXNativeTarget "MaijidTests" */;
 			buildPhases = (
 				DABF835018BC541B00A102DA /* Sources */,
 				DABF835118BC541B00A102DA /* Frameworks */,
@@ -322,9 +322,9 @@
 			dependencies = (
 				DABF835A18BC541B00A102DA /* PBXTargetDependency */,
 			);
-			name = RPSlidingMenuDemoTests;
+			name = MaijidTests;
 			productName = RPSlidingMenuDemoTests;
-			productReference = DABF835418BC541B00A102DA /* RPSlidingMenuDemoTests.xctest */;
+			productReference = DABF835418BC541B00A102DA /* MaijidTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
 /* End PBXNativeTarget section */
@@ -342,7 +342,7 @@
 					};
 				};
 			};
-			buildConfigurationList = DABF832E18BC541B00A102DA /* Build configuration list for PBXProject "RPSlidingMenuDemo" */;
+			buildConfigurationList = DABF832E18BC541B00A102DA /* Build configuration list for PBXProject "Maijid" */;
 			compatibilityVersion = "Xcode 3.2";
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
@@ -355,8 +355,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				DABF833218BC541B00A102DA /* RPSlidingMenuDemo */,
-				DABF835318BC541B00A102DA /* RPSlidingMenuDemoTests */,
+				DABF833218BC541B00A102DA /* Maijid */,
+				DABF835318BC541B00A102DA /* MaijidTests */,
 			);
 		};
 /* End PBXProject section */
@@ -424,7 +424,7 @@
 /* Begin PBXTargetDependency section */
 		DABF835A18BC541B00A102DA /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = DABF833218BC541B00A102DA /* RPSlidingMenuDemo */;
+			target = DABF833218BC541B00A102DA /* Maijid */;
 			targetProxy = DABF835918BC541B00A102DA /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -533,9 +533,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "RPSlidingMenuDemo/RPSlidingMenuDemo-Prefix.pch";
-				INFOPLIST_FILE = "RPSlidingMenuDemo/RPSlidingMenuDemo-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "RPSlidingMenuDemo/Maijid-Prefix.pch";
+				INFOPLIST_FILE = "RPSlidingMenuDemo/Maijid-Info.plist";
+				PRODUCT_NAME = Maijid;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -546,9 +546,9 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
-				GCC_PREFIX_HEADER = "RPSlidingMenuDemo/RPSlidingMenuDemo-Prefix.pch";
-				INFOPLIST_FILE = "RPSlidingMenuDemo/RPSlidingMenuDemo-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				GCC_PREFIX_HEADER = "RPSlidingMenuDemo/Maijid-Prefix.pch";
+				INFOPLIST_FILE = "RPSlidingMenuDemo/Maijid-Info.plist";
+				PRODUCT_NAME = Maijid;
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -568,8 +568,8 @@
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = "RPSlidingMenuDemoTests/RPSlidingMenuDemoTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "RPSlidingMenuDemoTests/MaijidTests-Info.plist";
+				PRODUCT_NAME = MaijidTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -586,8 +586,8 @@
 				);
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "RPSlidingMenuDemo/RPSlidingMenuDemo-Prefix.pch";
-				INFOPLIST_FILE = "RPSlidingMenuDemoTests/RPSlidingMenuDemoTests-Info.plist";
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				INFOPLIST_FILE = "RPSlidingMenuDemoTests/MaijidTests-Info.plist";
+				PRODUCT_NAME = MaijidTests;
 				TEST_HOST = "$(BUNDLE_LOADER)";
 				WRAPPER_EXTENSION = xctest;
 			};
@@ -596,7 +596,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		DABF832E18BC541B00A102DA /* Build configuration list for PBXProject "RPSlidingMenuDemo" */ = {
+		DABF832E18BC541B00A102DA /* Build configuration list for PBXProject "Maijid" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DABF836318BC541B00A102DA /* Debug */,
@@ -605,7 +605,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DABF836518BC541B00A102DA /* Build configuration list for PBXNativeTarget "RPSlidingMenuDemo" */ = {
+		DABF836518BC541B00A102DA /* Build configuration list for PBXNativeTarget "Maijid" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DABF836618BC541B00A102DA /* Debug */,
@@ -614,7 +614,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		DABF836818BC541B00A102DA /* Build configuration list for PBXNativeTarget "RPSlidingMenuDemoTests" */ = {
+		DABF836818BC541B00A102DA /* Build configuration list for PBXNativeTarget "MaijidTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				DABF836918BC541B00A102DA /* Debug */,

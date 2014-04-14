@@ -22,6 +22,39 @@
     // Example of changing the feature height and collapsed height for all
     self.featureHeight = 400.0f;
 //    self.collapsedHeight = 50.0f;
+    
+//    self.collectionView.backgroundColor = [UIColor redColor];
+    
+    //Set the background of the CollectionView
+    UIImageView *backgroundImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"blue_bg"]];
+    
+    UILabel *nothingHere = [[UILabel alloc] init];
+    nothingHere.numberOfLines = 0;
+    nothingHere.textColor = [UIColor whiteColor];
+    nothingHere.font = [UIFont fontWithName:@"Avenir Next" size:22.0f];
+    nothingHere.text = @"Nothing here!\nScroll back down! :)";
+    [nothingHere sizeToFit];
+    [nothingHere setCenter:self.collectionView.center];
+
+    
+    UIImageView *yuscroll = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"yuscroll"]];
+    CGRect frame = yuscroll.frame;
+   CGAffineTransform t = CGAffineTransformMakeScale(0.7, 0.7);
+    CGRect newFrame = CGRectApplyAffineTransform(frame, t);
+    [yuscroll setFrame:newFrame];
+    
+    yuscroll.center = self.collectionView.center;
+    [backgroundImageView addSubview:yuscroll];
+    
+//    [backgroundImageView addSubview:nothingHere];
+    
+//    [self.label setCenter:CGPointMake(view.frame.size.width / 2, view.frame.size.height / 2)]
+
+    
+    
+    [backgroundImageView setFrame:self.collectionView.frame];
+    self.collectionView.backgroundView = backgroundImageView;
+    
 }
 
 - (BOOL)prefersStatusBarHidden {
@@ -54,40 +87,38 @@
         case 0: {
             slidingMenuCell.textLabel.text = @"Hi, I'm Maijid";
             slidingMenuCell.detailTextLabel.numberOfLines = 0;
-            slidingMenuCell.detailTextLabel.text = @"And I rock this world. \n maijid.com";
-//            [slidingMenuCell.detailTextLabel sizeToFit];
+            slidingMenuCell.detailTextLabel.text = @"Welcome!";
             slidingMenuCell.backgroundImageView.image = [UIImage imageNamed:@"me"];
             break;
         }
             
         case 1: {
             slidingMenuCell.textLabel.text = @"Educational";
-            slidingMenuCell.detailTextLabel.text = @"Formally studied on 3 continents ->";
+            slidingMenuCell.detailTextLabel.text = @"Tap to see where I've studied across the world";
             slidingMenuCell.backgroundImageView.image = [UIImage imageNamed:@"grinnell_college_1"];
             break;
         }
             
         case 2:{
             slidingMenuCell.textLabel.text = @"Professional";
-            slidingMenuCell.detailTextLabel.text = @"I love everything iOS";
+            slidingMenuCell.detailTextLabel.text = @"Tap to see some of my featured iOS work";
             slidingMenuCell.backgroundImageView.image = [UIImage imageNamed:@"image2_320x210"];
             break;
         }
         
         case 3: {
             slidingMenuCell.textLabel.text = @"Technical skills";
-            slidingMenuCell.detailTextLabel.text = @"I do more things. ";
-            slidingMenuCell.backgroundImageView.image = [UIImage imageNamed:@"image1_320x210"];
+            slidingMenuCell.detailTextLabel.text = @"Oh wait, there's more!  ";
+            slidingMenuCell.backgroundImageView.image = [UIImage imageNamed:@"code_b"];
             break;
         }
             
         case 4: {
-            slidingMenuCell.textLabel.text = @"Other Interests";
-            slidingMenuCell.detailTextLabel.text = @"I do things. ";
-            slidingMenuCell.backgroundImageView.image = [UIImage imageNamed:@"grinnell_college_1"];
+            slidingMenuCell.textLabel.text = @"Thank you!";
+            slidingMenuCell.detailTextLabel.text = @"Check out my website @ maijid.com";
+            slidingMenuCell.backgroundImageView.image = [UIImage imageNamed:@"image1_320x210"];
             break;
         }
-            
             
         default:
             break;

@@ -19,13 +19,14 @@
 @property (weak, nonatomic) IBOutlet UILabel *titleLabel;
 @property (weak, nonatomic) IBOutlet UITextView *descriptionTextview;
 
-
 @property (weak, nonatomic) IBOutlet UIImageView *leftImageView;
 @property (weak, nonatomic) IBOutlet UIImageView *midImageView;
 @property (weak, nonatomic) IBOutlet UIImageView *rightImageView;
 @property (weak, nonatomic) IBOutlet UITextView *bottomTextview;
+@property (weak, nonatomic) IBOutlet UIImageView *downTriggerImageView;
 
 @property (weak, nonatomic) IBOutlet FBShimmeringView *shimmeringView;
+@property (weak, nonatomic) IBOutlet FBShimmeringView *leftShimmeringView;
 
 @end
 
@@ -44,6 +45,9 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(fadeBackButton:) name:@"BTScrolling" object:nil];
     
     self.mediaFocusController = [[URBMediaFocusViewController alloc] init];
     
@@ -93,6 +97,11 @@
 
 }
 
+- (void)fadeBackButton:(NSNotification *)note {
+    float ratio =  [[[note userInfo] valueForKey:@"ratio"] doubleValue];
+    self.downTriggerImageView.alpha = 1 - ratio;
+}
+
 - (void)showMediaLeft
 {
     [self.mediaFocusController showImage:self.leftImageView.image fromView:self.view];
@@ -124,9 +133,25 @@
     swipeRight.text = @">>>";
     swipeRight.textColor = [UIColor whiteColor];
     
+    UILabel *swipeLeft = [[UILabel alloc] initWithFrame:self.leftShimmeringView.bounds];
+    swipeLeft.textAlignment = NSTextAlignmentCenter;
+    swipeLeft.text = @"<<<";
+    swipeLeft.textColor = [UIColor whiteColor];
+    
+    self.leftShimmeringView.contentView = swipeLeft;
+    self.leftShimmeringView.shimmeringDirection = FBShimmerDirectionLeft;
     self.shimmeringView.contentView = swipeRight;
-
-    self.shimmeringView.shimmering = YES;
+//     self.leftShimmeringView.shimmeringSpeed = 100.0f;
+    
+    self.leftShimmeringView.shimmering = self.shimmeringView.shimmering = YES;
+    
+    if (![self.activity hasLeft] ) {
+        self.leftShimmeringView.hidden = YES;
+    }
+    
+    if (![self.activity hasRight]) {
+        self.shimmeringView.hidden = YES;
+    }
 }
 
 /*

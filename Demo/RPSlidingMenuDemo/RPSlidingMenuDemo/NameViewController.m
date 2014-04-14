@@ -13,7 +13,6 @@
 @interface NameViewController ()
 @property (weak, nonatomic) IBOutlet UIButton *backButton;
 @property (nonatomic, strong) NSMutableArray *allProActivities;
-
 @end
 
 @implementation NameViewController
@@ -49,6 +48,9 @@
 {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
+    
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(fadeBackButton:) name:@"BTScrolling" object:nil];
+    
     self.allProActivities = [[NSMutableArray alloc] initWithCapacity:5];
     
     //Create all the proActivities.
@@ -59,6 +61,8 @@
     appdev.leftImage = [UIImage imageNamed:@"appdevlogo"];
     appdev.midImage = [UIImage imageNamed:@"appdev"];
     appdev.rightImage = [UIImage imageNamed:@"appdev_apps"];
+    
+    appdev.hasRight = YES;
     
     [self.allProActivities addObject:appdev];
     
@@ -71,6 +75,7 @@
     barkcare.midImage = [UIImage imageNamed:@"barkcare-message"];
     barkcare.rightImage = [UIImage imageNamed:@"barkcare-promo"];
     
+    barkcare.hasRight = barkcare.hasLeft = YES;
     
     [self.allProActivities addObject:barkcare];
     
@@ -80,6 +85,8 @@
     pikuzone.bottomString = @"See more at http://pikuzone.com";
     pikuzone.leftImage = [UIImage imageNamed:@"pikuzone_web"];
     pikuzone.midImage = [UIImage imageNamed:@"pikuzone"];
+    
+    pikuzone.hasLeft = pikuzone.hasRight = YES;
     
     [self.allProActivities addObject:pikuzone];
     
@@ -91,6 +98,8 @@
     voyse.leftImage = [UIImage imageNamed:@"voyse-playback"];
     voyse.midImage = [UIImage imageNamed:@"voice_icon"];
     voyse.rightImage = [UIImage imageNamed:@"hannah"];
+    
+    voyse.hasLeft = YES;
     
     [self.allProActivities addObject:voyse];
 
@@ -140,6 +149,11 @@
     
     
     
+}
+
+- (void)fadeBackButton:(NSNotification *)note {
+    float ratio =  [[[note userInfo] valueForKey:@"ratio"] doubleValue];
+    self.backButton.alpha = 1 - ratio;
 }
 
 - (void)viewWillAppear:(BOOL)animated

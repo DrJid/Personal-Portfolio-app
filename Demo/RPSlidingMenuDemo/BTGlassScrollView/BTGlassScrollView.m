@@ -298,6 +298,10 @@
     
     //set alpha
     [_blurredBackgroundImageView setAlpha:ratio];
+    
+    //Hook into this for the background scrolling. Send a notification with the alpha value.
+    [[NSNotificationCenter defaultCenter] postNotificationName:@"BTScrolling" object:nil userInfo:@{@"ratio": @(ratio)}];
+    
 }
 
 - (void)scrollViewWillEndDragging:(UIScrollView *)scrollView withVelocity:(CGPoint)velocity targetContentOffset:(inout CGPoint *)targetContentOffset

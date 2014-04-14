@@ -19,6 +19,7 @@
 @property (weak, nonatomic) IBOutlet UIImageView *nodeBadge;
 
 @property (weak, nonatomic) IBOutlet UIButton *backButton;
+@property (weak, nonatomic) IBOutlet UIImageView *background_imageview;
 
 // Animators
 @property (nonatomic, strong) UISnapBehavior *objcSnapBehavior;
@@ -52,6 +53,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
+    self.background_imageview.layer.zPosition = -200; 
     /*
     self.noticeView = [[UIView alloc] init];
     self.noticeView.frame = CGRectMake(0, -20, 320, 30);
@@ -68,25 +70,25 @@
     //ObjC badge setup.
     CGRect orginalFrame = self.objcBadge.frame;
     CGPoint mid = CGPointMake(CGRectGetMidX(orginalFrame), CGRectGetMidY(orginalFrame));
-    self.objcBadge.frame = CGRectOffset(self.objcBadge.frame, 0, 1000);
+    self.objcBadge.frame = CGRectOffset(self.objcBadge.frame, 0, -200);
     self.objcBadge.layer.zPosition = -10;
     self.objcSnapBehavior = [[UISnapBehavior alloc]initWithItem:self.objcBadge snapToPoint:mid];
-    self.objcSnapBehavior.damping = 0.6;
+    self.objcSnapBehavior.damping = 0.8;
     
     //web badge setup
      orginalFrame = self.webTechBadge.frame;
      mid = CGPointMake(CGRectGetMidX(orginalFrame), CGRectGetMidY(orginalFrame));
-    self.webTechBadge.frame = CGRectOffset(self.webTechBadge.frame, 0, 600);
+    self.webTechBadge.frame = CGRectOffset(self.webTechBadge.frame, 0, 350);
     self.webSnapBehavior = [[UISnapBehavior alloc]initWithItem:self.webTechBadge snapToPoint:mid];
-    self.webSnapBehavior.damping = 0.7;
+    self.webSnapBehavior.damping = 0.95;
     
     //c badge setup
     orginalFrame = self.cBadge.frame;
     mid = CGPointMake(CGRectGetMidX(orginalFrame), CGRectGetMidY(orginalFrame));
-    self.cBadge.frame = CGRectOffset(self.cBadge.frame, 200, 700);
+    self.cBadge.frame = CGRectOffset(self.cBadge.frame, 0, 200);
     self.cBadge.layer.zPosition = -5;
     self.cSnapBehavior = [[UISnapBehavior alloc]initWithItem:self.cBadge snapToPoint:mid];
-    self.cSnapBehavior.damping = 0.8;
+    self.cSnapBehavior.damping = 0.95;
     
     //rails badge setup
     orginalFrame = self.railsBadge.frame;
@@ -101,11 +103,6 @@
     self.nodeBadge.frame = CGRectOffset(self.nodeBadge.frame, 300, 400);
     self.nodeSnapBehavior = [[UISnapBehavior alloc]initWithItem:self.nodeBadge snapToPoint:mid];
     self.nodeSnapBehavior.damping = 0.9;
-    
-    
-    
-    
-    
     
    // self.jsBadge.frame = CGRectOffset(self.jsBadge.frame, -200, 0);
    // self.jsSnapBehavior = [[UISnapBehavior alloc] initWithItem:self.jsBadge snapToPoint:CGPointMake(40, 73)];
