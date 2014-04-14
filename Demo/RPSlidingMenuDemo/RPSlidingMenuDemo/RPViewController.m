@@ -43,6 +43,9 @@
     CGRect newFrame = CGRectApplyAffineTransform(frame, t);
     [yuscroll setFrame:newFrame];
     
+    yuscroll.layer.cornerRadius = 20.0f;
+    yuscroll.layer.masksToBounds  = YES;
+    
     yuscroll.center = self.collectionView.center;
     [backgroundImageView addSubview:yuscroll];
     
