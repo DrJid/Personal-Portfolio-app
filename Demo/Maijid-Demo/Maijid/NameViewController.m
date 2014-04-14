@@ -17,7 +17,6 @@
 
 @implementation NameViewController
 {
-//    BTGlassScrollView *_glassScrollView;
     
     UIScrollView *_viewScroller;
     
@@ -145,10 +144,6 @@
     [_viewScroller addSubview:_glassScrollView2];
     [_viewScroller addSubview:_glassScrollView3];
     [_viewScroller addSubview:_glassScrollView4];
-    
-    
-    
-    
 }
 
 - (void)fadeBackButton:(NSNotification *)note {
@@ -176,7 +171,6 @@
     [_viewScroller setContentOffset:CGPointMake(page * _viewScroller.frame.size.width, _viewScroller.contentOffset.y)];
     _page = page;
     
-    
     //show animation trick
     double delayInSeconds = 2.0;
     dispatch_time_t popTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(delayInSeconds * NSEC_PER_SEC));
@@ -200,8 +194,6 @@
 - (void)viewDidAppear:(BOOL)animated
 {
     [super viewDidAppear:animated];
-    
-    
 }
 
 // customViewWithProfessionalObject
@@ -220,57 +212,6 @@
     
     return pvc.view;
 }
-//
-//
-//- (UIView *)customView
-//{
-//    UIView *view = [[UIView alloc] initWithFrame:CGRectMake(0, 0, 320, 705)];
-//    
-//    UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(5, 5, 310, 120)];
-//    //    [label setText:[NSString stringWithFormat:@"%i℉",arc4random_uniform(20) + 60]];
-//    label.text = @"Grinnell Appdev";
-//    [label setTextColor:[UIColor whiteColor]];
-//    [label setFont:[UIFont fontWithName:@"HelveticaNeue" size:40]];
-//    [label setShadowColor:[UIColor blackColor]];
-//    [label setShadowOffset:CGSizeMake(1, 1)];
-//    [label sizeToFit];
-//    [view addSubview:label];
-//    
-//    UIView *box1 = [[UIView alloc] initWithFrame:CGRectMake(5, 140, 310, 125)];
-//    box1.layer.cornerRadius = 3;
-//    box1.backgroundColor = [UIColor colorWithWhite:0 alpha:.15];
-//    [view addSubview:box1];
-//    
-//    UIView *box2 = [[UIView alloc] initWithFrame:CGRectMake(5, 270, 310, 300)];
-//    box2.layer.cornerRadius = 3;
-//    box2.backgroundColor = [UIColor colorWithWhite:0 alpha:.15];
-//    [view addSubview:box2];
-//    
-//    UIView *box3 = [[UIView alloc] initWithFrame:CGRectMake(5, 575, 310, 125)];
-//    box3.layer.cornerRadius = 3;
-//    box3.backgroundColor = [UIColor colorWithWhite:0 alpha:.15];
-//    [view addSubview:box3];
-//    
-////    return view;
-//    
-//
-//     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
-//     
-//     //Should rename this.. to ArticleViewController.. But it was being awkward the last time i tried.
-//     ProfessionalViewController *pvc = [storyboard instantiateViewControllerWithIdentifier:@"ProfessionalViewController"];
-//    
-////     tvc.article = article;
-//    
-//     //    [tvc  updateViewConstraints];
-//     //    [tvc viewWillLayoutSubviews];
-//     
-//     [self addChildViewController:pvc];
-//     [pvc didMoveToParentViewController:self];
-//     
-//     return pvc.view;
-//    
-//    
-//}
 
 - (void)didReceiveMemoryWarning
 {
@@ -306,7 +247,6 @@
     BTGlassScrollView *glass = [self currentGlass];
     
     //can probably be optimized better than this
-    //this is just a demonstration without optimization
     [_glassScrollView1 scrollVerticallyToOffset:glass.foregroundScrollView.contentOffset.y];
     [_glassScrollView2 scrollVerticallyToOffset:glass.foregroundScrollView.contentOffset.y];
     [_glassScrollView3 scrollVerticallyToOffset:glass.foregroundScrollView.contentOffset.y];
@@ -340,17 +280,5 @@
 {
     [self viewWillAppear:YES];
 }
-
-
-/*
- #pragma mark - Navigation
- 
- // In a storyboard-based application, you will often want to do a little preparation before navigation
- - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
- {
- // Get the new view controller using [segue destinationViewController].
- // Pass the selected object to the new view controller.
- }
- */
 
 @end

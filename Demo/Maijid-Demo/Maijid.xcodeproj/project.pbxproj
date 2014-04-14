@@ -7,10 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		165DF2D618FC893E003DA1ED /* SVProgressHUD.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 165DF2D318FC893E003DA1ED /* SVProgressHUD.bundle */; };
+		165DF2D718FC893E003DA1ED /* SVProgressHUD.m in Sources */ = {isa = PBXBuildFile; fileRef = 165DF2D518FC893E003DA1ED /* SVProgressHUD.m */; };
 		168195A318F8F2A000C6D9CA /* NameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 168195A218F8F2A000C6D9CA /* NameViewController.m */; };
 		168195A918F8F71B00C6D9CA /* BTGlassScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = 168195A618F8F71B00C6D9CA /* BTGlassScrollView.m */; };
 		168195AA18F8F71B00C6D9CA /* UIImage+ImageEffects.m in Sources */ = {isa = PBXBuildFile; fileRef = 168195A818F8F71B00C6D9CA /* UIImage+ImageEffects.m */; settings = {COMPILER_FLAGS = "-w"; }; };
-		168195AC18F8FC5F00C6D9CA /* Grinnell.png in Resources */ = {isa = PBXBuildFile; fileRef = 168195AB18F8FC5F00C6D9CA /* Grinnell.png */; };
 		168195AF18F9003300C6D9CA /* MapViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 168195AE18F9003300C6D9CA /* MapViewController.m */; };
 		168195B118F9005E00C6D9CA /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 168195B018F9005E00C6D9CA /* MapKit.framework */; };
 		168195B918F908C200C6D9CA /* JPSThumbnailAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = 168195B518F908C200C6D9CA /* JPSThumbnailAnnotation.m */; };
@@ -53,13 +54,16 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		165DF2D218FC893E003DA1ED /* SVProgressHUD-Prefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "SVProgressHUD-Prefix.pch"; sourceTree = "<group>"; };
+		165DF2D318FC893E003DA1ED /* SVProgressHUD.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = SVProgressHUD.bundle; sourceTree = "<group>"; };
+		165DF2D418FC893E003DA1ED /* SVProgressHUD.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SVProgressHUD.h; sourceTree = "<group>"; };
+		165DF2D518FC893E003DA1ED /* SVProgressHUD.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SVProgressHUD.m; sourceTree = "<group>"; };
 		168195A118F8F2A000C6D9CA /* NameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NameViewController.h; sourceTree = "<group>"; };
 		168195A218F8F2A000C6D9CA /* NameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NameViewController.m; sourceTree = "<group>"; };
 		168195A518F8F71B00C6D9CA /* BTGlassScrollView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BTGlassScrollView.h; sourceTree = "<group>"; };
 		168195A618F8F71B00C6D9CA /* BTGlassScrollView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BTGlassScrollView.m; sourceTree = "<group>"; };
 		168195A718F8F71B00C6D9CA /* UIImage+ImageEffects.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+ImageEffects.h"; sourceTree = "<group>"; };
 		168195A818F8F71B00C6D9CA /* UIImage+ImageEffects.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+ImageEffects.m"; sourceTree = "<group>"; };
-		168195AB18F8FC5F00C6D9CA /* Grinnell.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Grinnell.png; sourceTree = "<group>"; };
 		168195AD18F9003300C6D9CA /* MapViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MapViewController.h; sourceTree = "<group>"; };
 		168195AE18F9003300C6D9CA /* MapViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MapViewController.m; sourceTree = "<group>"; };
 		168195B018F9005E00C6D9CA /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
@@ -137,6 +141,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		165DF2D118FC893E003DA1ED /* SVProgressHUD */ = {
+			isa = PBXGroup;
+			children = (
+				165DF2D218FC893E003DA1ED /* SVProgressHUD-Prefix.pch */,
+				165DF2D318FC893E003DA1ED /* SVProgressHUD.bundle */,
+				165DF2D418FC893E003DA1ED /* SVProgressHUD.h */,
+				165DF2D518FC893E003DA1ED /* SVProgressHUD.m */,
+			);
+			path = SVProgressHUD;
+			sourceTree = "<group>";
+		};
 		168195A418F8F71B00C6D9CA /* BTGlassScrollView */ = {
 			isa = PBXGroup;
 			children = (
@@ -186,6 +201,7 @@
 		DABF832A18BC541B00A102DA = {
 			isa = PBXGroup;
 			children = (
+				165DF2D118FC893E003DA1ED /* SVProgressHUD */,
 				168195CE18F960BE00C6D9CA /* FBShimmering */,
 				168195C718F9514A00C6D9CA /* URBMediaFocusViewController */,
 				168195B218F908C200C6D9CA /* JPSThumbnailAnnotation */,
@@ -239,7 +255,6 @@
 				168195C018F9306B00C6D9CA /* TechSkillsViewController.m */,
 				DABF834E18BC541B00A102DA /* Images.xcassets */,
 				168195C418F93E8900C6D9CA /* c_knr.jpg */,
-				168195AB18F8FC5F00C6D9CA /* Grinnell.png */,
 				DABF833D18BC541B00A102DA /* Supporting Files */,
 			);
 			path = Maijid;
@@ -366,8 +381,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				165DF2D618FC893E003DA1ED /* SVProgressHUD.bundle in Resources */,
 				DABF834F18BC541B00A102DA /* Images.xcassets in Resources */,
-				168195AC18F8FC5F00C6D9CA /* Grinnell.png in Resources */,
 				DABF834118BC541B00A102DA /* InfoPlist.strings in Resources */,
 				168195C518F93E8900C6D9CA /* c_knr.jpg in Resources */,
 				DABF834A18BC541B00A102DA /* Main.storyboard in Resources */,
@@ -406,6 +421,7 @@
 				DABF834D18BC541B00A102DA /* RPViewController.m in Sources */,
 				168195AF18F9003300C6D9CA /* MapViewController.m in Sources */,
 				168195B918F908C200C6D9CA /* JPSThumbnailAnnotation.m in Sources */,
+				165DF2D718FC893E003DA1ED /* SVProgressHUD.m in Sources */,
 				DABF837218BC566300A102DA /* RPSlidingMenuCell.m in Sources */,
 				DABF837318BC566300A102DA /* RPSlidingMenuLayout.m in Sources */,
 			);

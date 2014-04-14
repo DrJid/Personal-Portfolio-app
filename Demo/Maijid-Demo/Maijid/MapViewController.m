@@ -39,73 +39,9 @@
     // Do any additional setup after loading the view.
     self.mapView.delegate = self;
     
-    /*
-    MKPointAnnotation *point = [[MKPointAnnotation alloc] init];
-    point.coordinate =
-    point.title = @"Where am I?";
-    point.subtitle = @"I'm here!!!";
-    
-    [self.mapView addAnnotation:point];
-    */
-    
-    
-    /*
-    MKMapPoint points[3];
-
-    //Get a bunch of coordinates!!!
-    //Create two coordinates.
-    CLLocationCoordinate2D startLocation;
-    startLocation.latitude = 39.281516;
-    startLocation.longitude= 76.580806;
-    points[0] = MKMapPointForCoordinate(startLocation);
-    
-    CLLocationCoordinate2D endLocation;
-    endLocation.latitude = 41.281516;
-    endLocation.longitude= 92.580806;
-    points[1] = MKMapPointForCoordinate(endLocation);
-    
-    //------
-    CLLocationCoordinate2D otherLocation;
-    otherLocation.latitude = 60.281516;
-    otherLocation.longitude= 76.580806;
-    points[2] = MKMapPointForCoordinate(otherLocation);
-    
-    
-    //Create annoations for all those coordinateSS!!!
-    
-    MKPointAnnotation *sourceAnnotation = [MKPointAnnotation new];
-    sourceAnnotation.coordinate = startLocation;
-    sourceAnnotation.title = @"Lea";
-    sourceAnnotation.subtitle = @"Loving the life!";
-    
-    MKPointAnnotation *destinationAnnotation = [MKPointAnnotation new];
-    destinationAnnotation.coordinate = endLocation;
-    destinationAnnotation.title = @"Daniel";
-    destinationAnnotation.subtitle = @"Notes on storytelling.";
-    
-    
-    MKPointAnnotation *otherAnnotation = [MKPointAnnotation new];
-    otherAnnotation.coordinate = otherLocation;
-    otherAnnotation.title = @"Maijid";
-    otherAnnotation.subtitle = @"I dunno.. whatever.";
-    
-    CLLocationCoordinate2D coords[3] = {startLocation, endLocation, otherLocation};
-    MKGeodesicPolyline *polyline = [MKGeodesicPolyline polylineWithCoordinates:coords count:3];
-    
-    [self.mapView addAnnotations:@[sourceAnnotation, destinationAnnotation, otherAnnotation]];
-    [self.mapView addOverlay:polyline level:MKOverlayLevelAboveRoads];
-    
-//    NSUInteger boundingRegion = 3;
-    MKCoordinateRegion boundingRegion = CoordinateRegionBoundingMapPoints(points, 3);
-    
-    boundingRegion.span.latitudeDelta *= 1.1f;
-    boundingRegion.span.longitudeDelta *= 1.1f;
-    [self.mapView setRegion:boundingRegion animated:YES];
-    */
-    
     // Annotations
     [self.mapView addAnnotations:[self annotations]];
-
+    
 }
 
 - (MKOverlayRenderer*)mapView:(MKMapView *)mapView rendererForOverlay:(id<MKOverlay>)overlay
@@ -135,7 +71,7 @@
     presec.title = @"Presby Boys High School";
     presec.subtitle = @"Male boarding school in GH";
     presec.coordinate = CLLocationCoordinate2DMake(5.555f, -0.1963f);
-
+    
     presec.disclosureBlock = ^{ NSLog(@"selected presec"); };
     
     // AIT
@@ -146,7 +82,7 @@
     AIT.coordinate = CLLocationCoordinate2DMake(47.49f, 19.03f);
     AIT.disclosureBlock = ^{ NSLog(@"selected ait"); };
     
-
+    
     // North Muskegon
     JPSThumbnail *nm = [[JPSThumbnail alloc] init];
     nm.image = [UIImage imageNamed:@"nm"];
@@ -158,13 +94,12 @@
     // Grinnell College!! !
     
     JPSThumbnail *grinnell = [[JPSThumbnail alloc] init];
-grinnell.image = [UIImage imageNamed:@"laurel"];
+    grinnell.image = [UIImage imageNamed:@"laurel"];
     grinnell.title = @"Grinnell College!";
     grinnell.subtitle = @"CS undergrad";
     grinnell.coordinate = CLLocationCoordinate2DMake(41.661, -91.530);
     grinnell.disclosureBlock = ^{ NSLog(@"selected grinnell"); };
     
-
     
     // Set up points for bounding zone
     MKMapPoint points[4];
@@ -178,12 +113,12 @@ grinnell.image = [UIImage imageNamed:@"laurel"];
     boundingRegion.span.longitudeDelta *= 1.1f;
     [self.mapView setRegion:boundingRegion animated:YES];
     
-
+    
     CLLocationCoordinate2D coords[4] = {presec.coordinate, AIT.coordinate, nm.coordinate, grinnell.coordinate};
     MKGeodesicPolyline *polyline = [MKGeodesicPolyline polylineWithCoordinates:coords count:4];
     [self.mapView addOverlay:polyline level:MKOverlayLevelAboveRoads];
-
-
+    
+    
     
     return @[[JPSThumbnailAnnotation annotationWithThumbnail:presec],
              [JPSThumbnailAnnotation annotationWithThumbnail:AIT],
@@ -191,39 +126,9 @@ grinnell.image = [UIImage imageNamed:@"laurel"];
              [JPSThumbnailAnnotation annotationWithThumbnail:grinnell]];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
-
 - (IBAction)goBack:(id)sender {
     [self.navigationController popViewControllerAnimated:YES];
 }
-
-
-
-
-
-- (void)mapView:(MKMapView *)mapView didUpdateUserLocation:(MKUserLocation *)userLocation
-{
-    MKCoordinateRegion region = MKCoordinateRegionMakeWithDistance(userLocation.coordinate, 800, 800);
-    [self.mapView setRegion:[self.mapView regionThatFits:region] animated:YES];
-    
-    // Add an annotation
-    MKPointAnnotation *point = [[MKPointAnnotation alloc] init];
-    point.coordinate = userLocation.coordinate;
-    point.title = @"Where am I?";
-    point.subtitle = @"I'm here!!!";
-    
-    [self.mapView addAnnotation:point];
-}
-
 
 MKCoordinateRegion CoordinateRegionBoundingMapPoints(MKMapPoint *points, NSUInteger count) {
     if (count == 0) {
@@ -270,53 +175,9 @@ MKCoordinateRegion CoordinateRegionBoundingMapPoints(MKMapPoint *points, NSUInte
     if ([annotation conformsToProtocol:@protocol(JPSThumbnailAnnotationProtocol)]) {
         return [((NSObject<JPSThumbnailAnnotationProtocol> *)annotation) annotationViewInMap:mapView];
     }
-    
-    NSLog(@"Annotation class: %@", [annotation class]);
-    if ([annotation isKindOfClass:[MKPointAnnotation class]]) {
-        static NSString *identifier = @"StoryRoute";
-        MKPinAnnotationView *annotationView = (MKPinAnnotationView *)[self.mapView
-                                                                      dequeueReusableAnnotationViewWithIdentifier:identifier];
-        // if (annotationView == nil) {
-        annotationView = [[MKPinAnnotationView alloc] initWithAnnotation:annotation reuseIdentifier:identifier];
-        annotationView.enabled = YES;
-        annotationView.canShowCallout = YES;
-        annotationView.animatesDrop = YES;
-        annotationView.pinColor = MKPinAnnotationColorGreen;
-        
-        NSLog(@"subtitle: %@", annotation.subtitle);
-        
-        NSLog(@"an t: %@", annotation.title);
-        
-        
-        
-        UIImage *image = nil;
-        if ([annotation.title isEqualToString:@"Lea"]) {
-            image = [UIImage imageNamed:@"grinnell_college_1"];
-        } else {
-            image = [UIImage imageNamed:@"trigang.jpg"];
-        }
-        UIImageView *imageView = [[UIImageView alloc] initWithImage:image];
-        
-        //        PFImageView *imageView = [[PFImageView alloc] init];
-        //        imageView.file = imageFile;
-        //        [imageView loadInBackground];
-        //        imageView.contentMode = UIViewContentModeScaleAspectFit;
-        //        imageView.frame = CGRectMake(0, 0, 35, 35);
-        annotationView.leftCalloutAccessoryView = imageView;
-        //
-        
-        // UIButton *rightButton = [UIButton buttonWithType:UIButtonTypeDetailDisclosure];
-        //[rightButton addTarget:self action:@selector(showLocationDetails:)forControlEvents:UIControlEventTouchUpInside];
-        //            annotationView.rightCalloutAccessoryView = rightButton;
-        /*
-         } else {
-         annotationView.annotation = annotation;
-         }
-         */
-        //button.tag = [locations indexOfObject:(Location *)annotation];
-        return annotationView;
-    }
+
     return nil;
+     
 }
 
 

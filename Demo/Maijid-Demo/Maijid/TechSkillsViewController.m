@@ -53,13 +53,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    self.background_imageview.layer.zPosition = -200; 
-    /*
-    self.noticeView = [[UIView alloc] init];
-    self.noticeView.frame = CGRectMake(0, -20, 320, 30);
-    self.noticeView.noticeLabel.text = @"Saved!";
-    [self.scrollView addSubview:self.noticeView];
-    */
+    self.background_imageview.layer.zPosition = -200;
     
     self.backButton.hidden = YES;
     self.backButton.alpha = 0.0f;
@@ -166,16 +160,5 @@
 - (IBAction)goBack:(id)sender {
     [self.navigationController popViewControllerAnimated:YES];
 }
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

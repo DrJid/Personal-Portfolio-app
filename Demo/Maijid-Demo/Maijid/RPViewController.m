@@ -7,7 +7,7 @@
 //
 
 #import "RPViewController.h"
-
+#import "SVProgressHUD.h"
 
 @interface RPViewController ()
 @property (weak, nonatomic) IBOutlet UICollectionView *collectionView;
@@ -21,10 +21,6 @@
 
     // Example of changing the feature height and collapsed height for all
     self.featureHeight = 400.0f;
-//    self.collapsedHeight = 50.0f;
-    
-//    self.collectionView.backgroundColor = [UIColor redColor];
-    
     //Set the background of the CollectionView
     UIImageView *backgroundImageView = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"blue_bg"]];
     
@@ -48,16 +44,22 @@
 - (BOOL)prefersStatusBarHidden {
     return YES;
 }
+- (void)viewDidDisappear:(BOOL)animated
+{
+    [super viewDidDisappear:animated];
+    [SVProgressHUD dismiss];
+    
+}
 
 
 - (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
 {
     if ([segue.identifier isEqualToString:@"showName"]) {
-        NSLog(@"showName segue called");
+        //NSLog(@"showName segue called");
     }
     
     if ([segue.identifier isEqualToString:@"showTechSkills"]) {
-        NSLog(@"showTechSkills segue called");
+        //NSLog(@"showTechSkills segue called");
     }
 }
 
@@ -65,7 +67,6 @@
 
 
 -(NSInteger)numberOfItemsInSlidingMenu{
-    // 10 for demo purposes, typically the count of some array
     return 5;
 }
 
@@ -116,7 +117,7 @@
 - (void)slidingMenu:(RPSlidingMenuViewController *)slidingMenu didSelectItemAtRow:(NSInteger)row{
 
     [super slidingMenu:slidingMenu didSelectItemAtRow:row];
-    
+
     switch (row) {
         case 0: {
             // do nothing.
@@ -129,7 +130,8 @@
         }
             
         case 2:{
-            [self performSegueWithIdentifier:@"showName" sender:self];
+            [SVProgressHUD show];
+            [self performSelector:@selector(showSV) withObject:nil afterDelay:0.1f];
             break;
         }
             
@@ -146,6 +148,11 @@
         default:
             break;
     }
+}
+
+- (void)showSV
+{
+    [self performSegueWithIdentifier:@"showName" sender:self];
 }
 
 
